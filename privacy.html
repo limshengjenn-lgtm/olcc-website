@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — OLCC Technology Sdn. Bhd.</title>
+<meta name="description" content="Privacy Policy for OLCC Technology Sdn. Bhd. and its mobile applications. How we collect, use, share, and protect your information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-900:#0a3535;--teal-800:#0d4444;--teal-700:#125454;--teal-600:#1a6868;
+    --mint:#4fd1c5;--mint-soft:#7eded5;--cream:#f7f5ef;--cream-2:#efebe0;
+    --ink:#0c2424;--muted:#5a7373;--line:rgba(13,68,68,.12);--maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.02em}
+  a{color:var(--teal-700);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(247,245,239,.82);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;letter-spacing:-.03em;color:var(--ink)}
+  .logo:hover{text-decoration:none}
+  .logo .mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--teal-700),var(--teal-900));display:grid;place-items:center;color:var(--mint);font-size:15px;font-weight:800;letter-spacing:0;box-shadow:0 4px 14px rgba(10,53,53,.25)}
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{font-weight:600;font-size:15px;color:var(--teal-800);opacity:.82;transition:opacity .2s}
+  .navlinks a:hover{opacity:1;text-decoration:none}
+  .navlinks .btn{background:var(--teal-800);color:var(--cream);padding:10px 20px;border-radius:999px;opacity:1;transition:transform .2s,background .2s}
+  .navlinks .btn:hover{background:var(--teal-900);transform:translateY(-1px)}
+
+  /* hero band */
+  .pp-hero{position:relative;padding:72px 0 56px;background:radial-gradient(800px 400px at 80% -10%,rgba(79,209,197,.16),transparent 60%);overflow:hidden}
+  .pp-hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:30px 30px;opacity:.5;mask-image:linear-gradient(to bottom,black,transparent 80%);-webkit-mask-image:linear-gradient(to bottom,black,transparent 80%)}
+  .pp-hero .wrap{position:relative;z-index:2}
+  .crumb{font-size:14px;color:var(--muted);font-weight:600}
+  .crumb a{color:var(--muted)}
+  .pp-hero h1{font-size:clamp(34px,5vw,56px);font-weight:800;margin:14px 0 0}
+  .updated{display:inline-block;margin-top:18px;font-size:14px;font-weight:700;color:var(--teal-700);background:rgba(79,209,197,.14);border:1px solid rgba(79,209,197,.3);padding:7px 15px;border-radius:999px}
+
+  /* body */
+  .pp-body{padding:56px 0 90px}
+  .pp-layout{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:start}
+  .toc{position:sticky;top:96px;font-size:14.5px}
+  .toc h4{font-family:'Bricolage Grotesque';font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .toc a{display:block;color:var(--muted);padding:6px 0;font-weight:600;border-left:2px solid transparent;padding-left:12px;margin-left:-14px;transition:.2s}
+  .toc a:hover{color:var(--teal-800);border-color:var(--mint);text-decoration:none}
+
+  .prose h2{font-size:24px;font-weight:700;margin:42px 0 14px;scroll-margin-top:96px}
+  .prose h2:first-child{margin-top:0}
+  .prose h3{font-size:18px;font-weight:700;margin:26px 0 8px}
+  .prose p{color:#21403f;margin-bottom:14px;font-size:16px}
+  .prose ul{margin:0 0 16px 22px}
+  .prose li{margin-bottom:8px;font-size:16px;color:#21403f}
+  .prose strong{color:var(--ink)}
+  .lead{font-size:17.5px;color:var(--muted)}
+  .callout{background:#fff;border:1px solid var(--line);border-left:4px solid var(--mint);border-radius:14px;padding:20px 24px;margin:20px 0}
+  .callout p{margin:0}
+  .contact-block{background:var(--teal-900);color:var(--cream);border-radius:18px;padding:30px 32px;margin-top:18px}
+  .contact-block p{color:rgba(247,245,239,.85)}
+  .contact-block a{color:var(--mint)}
+  .contact-block strong{color:#fff}
+
+  footer{background:var(--teal-900);color:rgba(247,245,239,.7);padding:48px 0 34px;margin-top:30px}
+  .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:rgba(247,245,239,.6)}
+  .foot-bottom a{color:rgba(247,245,239,.7)}
+
+  @media(max-width:880px){
+    .pp-layout{grid-template-columns:1fr;gap:30px}
+    .toc{position:static;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .navlinks a:not(.btn){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="/index.html" class="logo"><span class="mark">OL</span>OLCC&nbsp;Technology</a>
+      <div class="navlinks">
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#services">Services</a>
+        <a href="/index.html#contact" class="btn">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="pp-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="/index.html">Home</a> &nbsp;/&nbsp; Privacy Policy</div>
+    <h1>Privacy Policy</h1>
+    <span class="updated">Last updated: 7 June 2026</span>
+  </div>
+</section>
+
+<section class="pp-body">
+  <div class="wrap">
+    <div class="pp-layout">
+
+      <aside class="toc">
+        <h4>Contents</h4>
+        <a href="#intro">1. Introduction</a>
+        <a href="#collect">2. Information we collect</a>
+        <a href="#use">3. How we use it</a>
+        <a href="#share">4. How we share it</a>
+        <a href="#third">5. Third-party services</a>
+        <a href="#retention">6. Data retention</a>
+        <a href="#security">7. Security</a>
+        <a href="#rights">8. Your rights</a>
+        <a href="#children">9. Children's privacy</a>
+        <a href="#intl">10. International users</a>
+        <a href="#changes">11. Changes</a>
+        <a href="#contact">12. Contact us</a>
+      </aside>
+
+      <div class="prose">
+        <h2 id="intro">1. Introduction</h2>
+        <p class="lead">This Privacy Policy explains how OLCC Technology Sdn. Bhd. ("OLCC Technology", "we", "us", or "our") collects, uses, shares, and protects your information when you use our websites, mobile applications, and related services (together, the "Services").</p>
+        <p>OLCC Technology Sdn. Bhd. is a company incorporated in Malaysia (Registration No. 202601014520 / 1676618P), with its registered office in Johor, Malaysia. By using our Services, you agree to the practices described in this policy.</p>
+
+        <h2 id="collect">2. Information we collect</h2>
+        <p>The information we collect depends on which of our Services you use and how you use them. It may include:</p>
+        <h3>Information you provide to us</h3>
+        <ul>
+          <li><strong>Account and contact information</strong> — such as your name, email address, or other details you provide when you create an account, make a purchase, or contact us.</li>
+          <li><strong>Content you submit</strong> — information, files, or images you choose to upload to a Service in order to use its features.</li>
+          <li><strong>Communications</strong> — messages you send us for support or other enquiries.</li>
+        </ul>
+        <h3>Information collected automatically</h3>
+        <ul>
+          <li><strong>Device and technical data</strong> — such as device model, operating system version, app version, language settings, and unique device or app identifiers.</li>
+          <li><strong>Usage data</strong> — such as features used, actions taken in the app, and crash or diagnostic logs that help us fix problems and improve the Services.</li>
+        </ul>
+        <h3>Purchase information</h3>
+        <p>Purchases are processed by the relevant app store or payment provider (for example, Google Play). We receive confirmation that a purchase was completed and a transaction reference, but we do not collect or store your full payment card details.</p>
+
+        <h2 id="use">3. How we use your information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Provide, operate, and maintain the Services and their features;</li>
+          <li>Process purchases and deliver the content or features you have paid for;</li>
+          <li>Respond to your enquiries and provide customer support;</li>
+          <li>Diagnose technical issues, prevent abuse, and keep the Services secure;</li>
+          <li>Understand how the Services are used so we can improve them;</li>
+          <li>Comply with legal obligations.</li>
+        </ul>
+
+        <h2 id="share">4. How we share your information</h2>
+        <p><strong>We do not sell your personal information.</strong> We share information only in the following limited situations:</p>
+        <ul>
+          <li><strong>Service providers</strong> — trusted third parties who process data on our behalf (for example, hosting, analytics, crash reporting, or AI processing providers), under agreements that require them to protect your information.</li>
+          <li><strong>Legal requirements</strong> — where we are required to do so by law, regulation, or valid legal request, or to protect the rights, safety, and property of OLCC Technology, our users, or others.</li>
+          <li><strong>Business transfers</strong> — in connection with a merger, acquisition, or sale of assets, in which case we will take steps to protect your information.</li>
+        </ul>
+
+        <h2 id="third">5. Third-party services</h2>
+        <p>Our Services may rely on third-party platforms and providers, including app distribution and payment platforms (such as Google Play) and infrastructure or processing providers. These third parties handle data according to their own privacy policies, which we encourage you to review.</p>
+
+        <h2 id="retention">6. Data retention</h2>
+        <p>We retain personal information only for as long as necessary to provide the Services, fulfil the purposes described in this policy, comply with our legal obligations, resolve disputes, and enforce our agreements. When information is no longer needed, we delete or anonymise it.</p>
+
+        <h2 id="security">7. Security</h2>
+        <p>We take reasonable technical and organisational measures to protect your information against unauthorised access, loss, misuse, or alteration. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+        <h2 id="rights">8. Your rights</h2>
+        <p>Depending on your location, you may have the right to access, correct, update, or delete the personal information we hold about you, or to object to or restrict certain processing. To make a request, contact us using the details below. We will respond in accordance with applicable law.</p>
+        <div class="callout">
+          <p><strong>Account &amp; data deletion.</strong> You may request deletion of your account and associated personal data at any time by emailing us at <a href="mailto:developer@olcctechnology.com">developer@olcctechnology.com</a>. We will process verified requests within a reasonable period, subject to any legal retention requirements.</p>
+        </div>
+
+        <h2 id="children">9. Children's privacy</h2>
+        <p>Our Services are not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13 without appropriate consent. If you believe a child has provided us with personal information, please contact us so we can take appropriate steps. Where a Service is intended for students or younger users, we limit the data collected to what is necessary to provide the Service.</p>
+
+        <h2 id="intl">10. International users</h2>
+        <p>OLCC Technology is based in Malaysia, and your information may be processed in Malaysia or in other countries where our service providers operate. By using the Services, you understand that your information may be transferred to and processed in locations that may have different data protection laws than those in your country.</p>
+
+        <h2 id="changes">11. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page, and where appropriate we will provide additional notice. Your continued use of the Services after an update means you accept the revised policy.</p>
+
+        <h2 id="contact">12. Contact us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+        <div class="contact-block">
+          <p><strong>OLCC Technology Sdn. Bhd.</strong></p>
+          <p>Registration No. 202601014520 (1676618P)</p>
+          <p>Johor, Malaysia</p>
+          <p style="margin-top:8px">Email: <a href="mailto:developer@olcctechnology.com">developer@olcctechnology.com</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> OLCC Technology Sdn. Bhd. All rights reserved.</span>
+      <span><a href="/index.html">Home</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

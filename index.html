@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLCC Technology Sdn. Bhd. — Software & Educational Technology</title>
+<meta name="description" content="OLCC Technology Sdn. Bhd. is a Malaysia-based software company building mobile applications and educational technology products. Registration No. 202601014520 (1676618P), Johor, Malaysia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-900:#0a3535;
+    --teal-800:#0d4444;
+    --teal-700:#125454;
+    --teal-600:#1a6868;
+    --mint:#4fd1c5;
+    --mint-soft:#7eded5;
+    --cream:#f7f5ef;
+    --cream-2:#efebe0;
+    --ink:#0c2424;
+    --muted:#5a7373;
+    --line:rgba(13,68,68,.12);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(12px);
+    background:rgba(247,245,239,.82);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;letter-spacing:-.03em}
+  .logo .mark{
+    width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(135deg,var(--teal-700),var(--teal-900));
+    display:grid;place-items:center;color:var(--mint);
+    font-size:15px;font-weight:800;letter-spacing:0;
+    box-shadow:0 4px 14px rgba(10,53,53,.25);
+  }
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{font-weight:600;font-size:15px;color:var(--teal-800);opacity:.82;transition:opacity .2s}
+  .navlinks a:hover{opacity:1}
+  .navlinks .btn{
+    background:var(--teal-800);color:var(--cream);padding:10px 20px;border-radius:999px;
+    opacity:1;transition:transform .2s,background .2s;
+  }
+  .navlinks .btn:hover{background:var(--teal-900);transform:translateY(-1px)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--teal-800);border-radius:2px;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;padding:96px 0 110px;
+    background:
+      radial-gradient(900px 500px at 78% -8%,rgba(79,209,197,.16),transparent 60%),
+      radial-gradient(700px 400px at -5% 30%,rgba(18,84,84,.08),transparent 55%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(var(--line) 1px,transparent 1px);
+    background-size:30px 30px;opacity:.5;
+    mask-image:linear-gradient(to bottom,black,transparent 75%);
+    -webkit-mask-image:linear-gradient(to bottom,black,transparent 75%);
+  }
+  .hero .wrap{position:relative;z-index:2}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--teal-700);background:rgba(79,209,197,.14);
+    padding:7px 15px;border-radius:999px;border:1px solid rgba(79,209,197,.3);
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(79,209,197,.35)}
+  h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;margin:26px 0 0;max-width:14ch}
+  h1 .accent{color:var(--teal-600);position:relative;white-space:nowrap}
+  h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.14em;background:var(--mint);opacity:.55;border-radius:3px}
+  .lede{font-size:clamp(17px,1.9vw,20px);color:var(--muted);max-width:56ch;margin-top:26px}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px}
+  .btn-primary,.btn-ghost{padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s}
+  .btn-primary{background:var(--teal-800);color:var(--cream);box-shadow:0 10px 28px rgba(10,53,53,.22)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(10,53,53,.3)}
+  .btn-ghost{border:1.5px solid var(--teal-700);color:var(--teal-800)}
+  .btn-ghost:hover{background:var(--teal-800);color:var(--cream)}
+
+  .hero-stats{display:flex;gap:48px;flex-wrap:wrap;margin-top:64px;padding-top:40px;border-top:1px solid var(--line)}
+  .hero-stats .stat .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;color:var(--teal-800)}
+  .hero-stats .stat .l{font-size:14px;color:var(--muted);font-weight:600}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:92px 0}
+  .sec-head{max-width:680px;margin-bottom:54px}
+  .sec-tag{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mint);background:var(--teal-800);display:inline-block;padding:5px 13px;border-radius:6px}
+  .sec-head h2{font-size:clamp(30px,4vw,46px);font-weight:700;margin:18px 0 0}
+  .sec-head p{color:var(--muted);font-size:17px;margin-top:16px}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--cream)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;
+  }
+  .card::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--mint),var(--teal-600));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(10,53,53,.12);border-color:transparent}
+  .card:hover::after{transform:scaleX(1)}
+  .card .ic{width:54px;height:54px;border-radius:15px;background:var(--teal-900);display:grid;place-items:center;margin-bottom:22px}
+  .card .ic svg{width:26px;height:26px;stroke:var(--mint);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:21px;font-weight:700;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15.5px}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--teal-900);color:var(--cream);border-radius:0}
+  .about .sec-tag{background:var(--mint);color:var(--teal-900)}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .about h2{font-size:clamp(30px,4vw,46px);font-weight:700;color:#fff;max-width:18ch}
+  .about p{color:rgba(247,245,239,.78);font-size:17px;margin-top:22px;max-width:54ch}
+  .about p+p{margin-top:16px}
+  .info-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:8px 30px;backdrop-filter:blur(4px)}
+  .info-row{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .info-row:last-child{border-bottom:0}
+  .info-row .k{color:var(--mint-soft);font-size:14px;font-weight:600}
+  .info-row .v{font-weight:700;text-align:right;font-size:15px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--cream-2)}
+  .contact-box{
+    background:linear-gradient(135deg,var(--teal-800),var(--teal-900));
+    border-radius:28px;padding:64px;color:var(--cream);text-align:center;position:relative;overflow:hidden;
+  }
+  .contact-box::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -20%,rgba(79,209,197,.22),transparent 60%)}
+  .contact-box>*{position:relative;z-index:2}
+  .contact-box h2{font-size:clamp(28px,4vw,42px);color:#fff;max-width:18ch;margin:0 auto}
+  .contact-box p{color:rgba(247,245,239,.8);margin:18px auto 0;max-width:46ch;font-size:17px}
+  .mailbtn{display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:var(--mint);color:var(--teal-900);padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s}
+  .mailbtn:hover{transform:translateY(-2px)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--teal-900);color:rgba(247,245,239,.7);padding:56px 0 36px}
+  .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-top .logo{color:#fff}
+  .foot-cols{display:flex;gap:64px;flex-wrap:wrap}
+  .foot-col h4{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+  .foot-col a,.foot-col span{display:block;font-size:14.5px;margin-bottom:9px;color:rgba(247,245,239,.7);transition:color .2s}
+  .foot-col a:hover{color:var(--mint)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;font-size:13.5px;color:rgba(247,245,239,.55)}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:880px){
+    .grid3{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .navlinks{
+      position:fixed;inset:72px 0 auto 0;background:var(--cream);
+      flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);
+      transform:translateY(-120%);transition:transform .35s;align-items:stretch;
+    }
+    .navlinks.open{transform:none}
+    .navlinks a{padding:15px 28px}
+    .navlinks .btn{margin:10px 28px;text-align:center}
+    .burger{display:flex}
+    .contact-box{padding:44px 26px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo"><span class="mark">OL</span>OLCC&nbsp;Technology</a>
+      <div class="navlinks" id="menu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#company">Company</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:90px">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Software &amp; Educational Technology · Johor, Malaysia</span>
+    <h1>Building <span class="accent">mobile apps</span> and learning tools that matter.</h1>
+    <p class="lede">OLCC Technology Sdn. Bhd. is a Malaysia-registered software company. We design and develop mobile applications, business software, and educational technology products that help people learn and work better.</p>
+    <div class="cta-row">
+      <a href="#services" class="btn-primary">What we do</a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">2026</div><div class="l">Incorporated in Malaysia</div></div>
+      <div class="stat"><div class="n">Johor</div><div class="l">Registered office</div></div>
+      <div class="stat"><div class="n">Mobile&nbsp;·&nbsp;Web</div><div class="l">Product focus</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="sec-tag">About us</span>
+        <h2>A focused software studio based in Johor.</h2>
+        <p>Incorporated in April 2026, OLCC Technology Sdn. Bhd. brings together software engineering and education expertise to build products that are genuinely useful.</p>
+        <p>Our work spans computer programming, business and consumer applications, and educational support services — with a current focus on mobile apps that make studying and everyday tasks simpler.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-row"><span class="k">Company name</span><span class="v">OLCC Technology Sdn. Bhd.</span></div>
+        <div class="info-row"><span class="k">Registration no.</span><span class="v">202601014520<br>(1676618P)</span></div>
+        <div class="info-row"><span class="k">Incorporated</span><span class="v">14 April 2026</span></div>
+        <div class="info-row"><span class="k">State</span><span class="v">Johor, Malaysia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">What we do</span>
+      <h2>Software built end to end.</h2>
+      <p>From the first line of code to the published app, we cover the full development lifecycle across three core areas.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Computer Programming</h3>
+        <p>Custom software design and development — mobile apps, backends, and APIs built to be reliable, maintainable, and ready to scale.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Business &amp; Other Applications</h3>
+        <p>Practical applications for businesses and consumers — tools that solve real problems with clean, thoughtful product design.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3>Educational Support Services</h3>
+        <p>Non-instructional educational technology — learning platforms and study tools that support students and educators.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY / CREDENTIALS -->
+<section id="company" style="background:var(--cream);padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:760px">
+      <span class="sec-tag">Company profile</span>
+      <h2>A registered Malaysian company you can verify.</h2>
+      <p>OLCC Technology Sdn. Bhd. was incorporated on 14 April 2026 in Malaysia under registration number 202601014520 (1676618P). Our business activities include computer programming, business and other applications, and educational support services for the provision of non-instructional services. The company is registered in the state of Johor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <h2>Let's talk about your project.</h2>
+      <p>Have a question about our work, a partnership idea, or one of our apps? We'd be glad to hear from you.</p>
+      <a href="mailto:developer@olcctechnology.com" class="mailbtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+        developer@olcctechnology.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#" class="logo"><span class="mark">OL</span>OLCC&nbsp;Technology</a>
+        <p style="margin-top:14px;max-width:34ch;font-size:14.5px">Software &amp; educational technology, built in Johor, Malaysia.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Navigate</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#company">Company</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <span>OLCC Technology Sdn. Bhd.</span>
+          <span>Reg. 202601014520 (1676618P)</span>
+          <span>Johor, Malaysia</span>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="mailto:developer@olcctechnology.com">developer@olcctechnology.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> OLCC Technology Sdn. Bhd. All rights reserved.</span>
+      <span>Made in Johor, Malaysia 🇲🇾</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // mobile menu
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){m.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open')})});
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
