@@ -76,7 +76,21 @@
   @media(max-width:880px){
     .pp-layout{grid-template-columns:1fr;gap:30px}
     .toc{position:static;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .toc,.prose{min-width:0}
+    .prose a,.contact-block a,.callout a{overflow-wrap:anywhere}
     .navlinks a:not(.btn){display:none}
+  }
+  @media(max-width:600px){
+    .pp-hero{padding:48px 0 40px}
+    .pp-hero h1{font-size:clamp(30px,8.5vw,42px)}
+    .pp-body{padding:36px 0 64px}
+    .prose h2{font-size:21px;margin:32px 0 12px}
+    .prose p,.prose li{font-size:15.5px}
+    .contact-block{padding:22px 20px}
+    .callout{padding:16px 18px}
+    .logo{font-size:17px;gap:9px}
+    .logo .mark-img{height:36px}
+    .navlinks .btn{padding:9px 16px;font-size:14px}
   }
 </style>
 </head>
